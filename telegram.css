@@ -1,0 +1,48 @@
+ 
+.box .container{
+color: white;
+margin: 0 auto;
+padding: 50px 15px;
+}
+.box-title{
+    text-align: center;
+    line-height: 120%;
+    font-weight: bolder;
+    letter-spacing: 4px;
+    font-size: 29px;
+}
+.box-text{
+    color: white;
+    padding: 20px;
+    font-size: 25px;
+    text-align: center;
+    font-weight: 400;
+}
+.box-text span{
+    color: red;
+}
+.box-img{
+    width: 300px;
+    margin-left: 50px;
+    display: block;
+    margin-bottom: 10px;
+
+}
+.box-link{
+    background-color: #30A3E6;
+    box-shadow: 0px 4px 0px 0px #0496C4;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 13px 3px 13px 3px;
+    font-size: 34px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.box-link img{
+    background: none;
+    width: 50px;
+    height: 50px;
+    top: 100px;
+}
