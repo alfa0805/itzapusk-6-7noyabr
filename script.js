@@ -37,6 +37,7 @@ function showError(input, message) {
   clearError(input);
   const error = document.createElement("p");
   error.classList.add("error-text");
+  
   error.textContent = message;
   input.parentElement.insertAdjacentElement("afterend", error);
   input.classList.add("error-input");
@@ -129,3 +130,6 @@ form.addEventListener("submit", async (e) => {
     submitBtn.disabled = false;
   }
 });
+
+
+// let btn = document.getElementById("submit")
