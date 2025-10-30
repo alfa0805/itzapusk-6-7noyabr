@@ -68,9 +68,9 @@ phoneInput.addEventListener("input", (e) => {
 });
 
 // --- Telegram va Google Sheet ---
-const BOT_TOKEN = "XXX"; // o'zingnikini yoz
-const CHAT_ID = "XXX";   // o'zingnikini yoz
-const SHEET_URL = "https://script.google.com/macros/s/XXX/exec";
+const BOT_TOKEN = "8310381708:AAFMlkMv59XwlDJ3nGuxI4qypoX3a1HCB-w"; // o'zingnikini yoz
+const CHAT_ID = "-1002609658773";   // o'zingnikini yoz
+const SHEET_URL = "https://script.google.com/macros/s/AKfycbzAuoMO_y7SUTk0pIw7wm598Lji6WuRPjb71ggw3G1erCO6uYIAM7HEEDxkp59bjgT53w/exec";
 
 // --- Forma yuborish ---
 form.addEventListener("submit", async (e) => {
