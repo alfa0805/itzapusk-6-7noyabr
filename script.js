@@ -28,9 +28,9 @@ const SHEET_URL =
 
 // --- Modal boshqaruvi ---
 openBtn.addEventListener("click", () => (overlay.style.display = "flex"));
-overlay.addEventListener("click", (e) => {
-  if (e.target === overlay) overlay.style.display = "none";
-});
+// overlay.addEventListener("click", (e) => {
+//   if (e.target === overlay) overlay.style.display = "none";
+// });
 
 // --- Xatolik funksiyalari ---
 function showError(input, message) {
@@ -132,4 +132,6 @@ form.addEventListener("submit", async (e) => {
 });
 
 
-// let btn = document.getElementById("submit")
+// let btn = document.getElementById("submitBtn1")
+// openBtn.addEventListener("click", () => (overlay.style.display = "flex"));
+// btn.addEventListener("click" , () = )
