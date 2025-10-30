@@ -1,18 +1,3 @@
-// --- TIMER ---
-const timerDisplay = document.getElementById("timer");
-let timeLeft = 2 * 60;
-
-function updateTimer() {
-  const min = Math.floor(timeLeft / 60);
-  const sec = timeLeft % 60;
-  timerDisplay.textContent = `${min} :${sec < 10 ? " 0" : " "}${sec}`;
-  if (timeLeft > 0) timeLeft--;
-  else {
-    clearInterval(timerInterval);
-    timerDisplay.textContent = "Tugadi";
-  }
-}
-const timerInterval = setInterval(updateTimer, 1000);
 
 // --- ELEMENTLAR ---
 const overlay = document.getElementById("formOverlay");
@@ -115,7 +100,7 @@ form.addEventListener("submit", async (e) => {
       submitBtn.textContent = "RO‘YXATDAN O‘TISH";
       submitBtn.disabled = false;
       overlay.style.display = "none";
-      window.open("https://t.me/+JLNrGiMU5f0wYjYy", "_blank");
+      window.location.href = "telegram.html";
     }, 700);
   } catch (err) {
     alert("Xatolik yuz berdi: " + err.message);
@@ -123,3 +108,24 @@ form.addEventListener("submit", async (e) => {
     submitBtn.disabled = false;
   }
 });
+
+
+// --- TIMER ---
+const timerDisplay = document.getElementById("timer");
+let timeLeft = 2 * 60;
+
+function updateTimer() {
+  const min = Math.floor(timeLeft / 60);
+  const sec = timeLeft % 60;
+  timerDisplay.textContent = `${min} :${sec < 10 ? " 0" : " "}${sec}`;
+  if (timeLeft > 0) timeLeft--;
+  else {
+    clearInterval(timerInterval);
+    timerDisplay.textContent = "Tugadi";
+  }
+}
+const timerInterval = setInterval(updateTimer, 1000);
+
+// Telegram script ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
