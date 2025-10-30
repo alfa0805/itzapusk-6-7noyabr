@@ -21,21 +21,40 @@ padding: 50px 15px;
 .box-text span{
     color: red;
 }
+.box-block{
+    padding-top: 30px;
+    padding-bottom: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box-subimg{
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 360px;
+    width: 100%;
+}
 .box-img{
-    width: 300px;
-    margin-left: 50px;
-    display: block;
-    margin-bottom: 10px;
+    width: 100%;
+}
 
+.box-sublink{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
 }
 .box-link{
     background-color: #30A3E6;
     box-shadow: 0px 4px 0px 0px #0496C4;
     color: white;
     border: none;
-    border-radius: 30px;
-    padding: 13px 3px 13px 3px;
-    font-size: 34px;
+    border-radius: 25px;
+    max-width: 350px;
+    width: 100%;
+    height: 70px;
+    font-size: 31px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -45,4 +64,70 @@ padding: 50px 15px;
     width: 50px;
     height: 50px;
     top: 100px;
+}
+
+/* Y o‘qi bo‘yicha bir maromda tebranish animatsiyasi */
+.strel[class*="shake-"] {
+  animation-name: shake-y-even;
+  animation-duration: 2s;            /* 3 soniyada to‘liq bir sikl */
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;    /* pastga → yuqoriga → pastga */
+  will-change: transform;
+}
+
+@keyframes shake-y-even {
+  0%   { transform: translateY(0); }
+  25%  { transform: translateY(6px); }   /* pastga */
+  50%  { transform: translateY(0); }     /* markaz */
+  75%  { transform: translateY(6px); }  /* yuqoriga */
+  100% { transform: translateY(0); }     /* markazga qaytadi */
+}
+
+/* Accessibility: foydalanuvchi istamasa animatsiyani o‘chir */
+@media (prefers-reduced-motion: reduce) {
+  .strel[class*="shake-"] {
+    animation: none;
+  }
+}
+
+
+/* Asosiy tugma stili (moslashtir) */
+.btn2{
+  /* transform performance hint */
+  will-change: transform;
+  transform-origin: center;
+}
+
+/* Umumiy animatsiya sozlamalari:
+   - butun tsikl 4s (2s faol + 2s jim)
+   - cheksiz takrorlanadi
+*/
+.btn2[class*="shake-"]{
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+  /* default: 4s — 0-50%: qaltiradi (2s), 50-100%: jim */
+  animation-duration: 3.5s;
+}
+
+/* ===== 4 martalik qaltirlash (taxminan 4 ta tez tebranish 2s ichida) ===== */
+@keyframes shake-y-4 {
+  0%   { transform: translateX(0); }
+  5%   { transform: translateX(-6px); }
+  12%  { transform: translateX(6px); }
+  24%  { transform: translateX(-6px); }
+  36%  { transform: translateX(6px); }
+  50%  { transform: translateX(-4px); } /* 2s oxiri — jimga tushadi */
+  100% { transform: translateX(0); }
+}
+
+
+.btn2.shake-4 { animation-name: shake-y-4; }
+
+/* Accessibility: har bir kishi uchun animatsiyani o'chirish */
+@media (prefers-reduced-motion: reduce) {
+  .btn2[class*="shake-"] {
+    animation: none;
+  }
 }
