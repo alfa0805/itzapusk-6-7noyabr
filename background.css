@@ -1,0 +1,120 @@
+/* Asosiy container */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #111827; /* fon rangi */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* scrol qilganda ham joyida turadi */
+  z-index: -1; /* orqada tursin */
+}
+
+/* Grid pattern */
+.background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.2;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.8) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 1;
+}
+
+/* Qorong'u gradient overlay */
+.background::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.4)
+  );
+  z-index: 2;
+}
+
+/* Qizil gradient */
+.background .red-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    165deg,
+    rgba(80, 0, 0, 0.15) 0%,
+    rgba(40, 0, 0, 0.3) 100%
+  );
+  z-index: 3;
+}
+
+/* Pastdan yuqoriga qorayuvchi gradient */
+.background .bottom-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 33%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  z-index: 4;
+}
+
+/* Chap yuqoridagi yorqin nuqta */
+.background .top-glow {
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: #73009d;
+  opacity: 0.2;
+  filter: blur(80px);
+  z-index: 5;
+  animation: glowPulse 5s ease-in-out infinite alternate;
+}
+
+/* Chap va o‘ng tomondagi gradientlar */
+.background .fade-left,
+.background .fade-right {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 15%;
+  pointer-events: none;
+  z-index: 6;
+}
+
+.background .fade-left {
+  left: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent);
+}
+
+.background .fade-right {
+  right: 0;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.8), transparent);
+}
+
+/* Kontent orqa fon ustida joylashishi uchun */
+/* .background .content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: white;
+  padding-top: 100px;
+} */
+
+/* Yorqin nuqta pulsatsiya animatsiyasi */
+@keyframes glowPulse {
+  from {
+    opacity: 0.15;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0.3;
+    transform: scale(1.1);
+  }
+}

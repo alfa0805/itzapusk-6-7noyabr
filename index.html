@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./background.css" />
+    <link rel="stylesheet" href="./form.css" />
+  </head>
+  <body>
+    <div class="background">
+      <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+      <div class="red-gradient"></div>
+      <div class="bottom-gradient"></div>
+      <div class="top-glow"></div>
+      <div class="fade-left"></div>
+      <div class="fade-right"></div>
+      <!-- CONTENT ~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    </div>
+    <main class="main">
+      <div class="container">
+        <div class="top">
+          <div class="top--left">
+            <h2 class="top--title">6-7-Noyabr</h2>
+            <h3 class="top--text">20:30</h3>
+          </div>
+          <div class="top--right">
+            <h2 class="top--title1">600 000 so'm</h2>
+            <h3 class="top--text">BEPUL</h3>
+          </div>
+        </div>
+
+        <h2 class="title">
+          DASTURLASHDA <span class="title-span">0 DAN</span> DAROMADGACHA
+        </h2>
+
+        <div class="images">
+          <div class="images-pst1">
+            <div class="images-pst2"></div>
+          </div>
+          <img
+            src="./uuuuu.webp"
+            width="300px"
+            height=""
+            alt=""
+            class="images-img"
+          />
+        </div>
+
+        <div class="pstBtn">
+          <div class="subbtn">
+            <button id="openFormBtn" class="subbtn--btn attention-button">
+              BEPUL QATNASHISH
+            </button>
+          </div>
+        </div>
+
+        <div class="time">
+          <h2 id="timer" class="time--title">2 : 00</h2>
+        </div>
+
+        <h2 class="subtitle">
+          BEPUL <span class="title-span">VEBINAR DAVOMIDA</span> NIMALARNI
+          O'RGANASIZ?
+        </h2>
+
+        <ul class="list">
+          <li class="item">
+            <div class="item-pst">
+              <p class="item-num-text">01</p>
+            </div>
+            <p class="item-text">
+              Dasturlashda soha tanlash va daromadgacha chiqish qadamlarini
+            </p>
+          </li>
+
+          <li class="item">
+            <div class="item-pst">
+              <p class="item-num-text">02</p>
+            </div>
+            <p class="item-text">
+              Dasturlashni 0 dan qisqa vaqtda o'rganish qadamlarini
+            </p>
+          </li>
+
+          <li class="item">
+            <div class="item-pst">
+              <p class="item-num-text">03</p>
+            </div>
+            <p class="item-text">
+              Birinchi 1000$ topish uslublarini o'rganasiz
+            </p>
+          </li>
+        </ul>
+
+        <div class="pstBtn1">
+          <div class="subbtn1">
+            <button id="openFormBtn1" class="subbtn--btn attention-button">
+              BEPUL QATNASHISH
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Modall  -->
+
+    <div class="overlay" id="formOverlay">
+      <div class="modal" id="formModal">
+        <!-- <span class="close-btn" id="closeBtn">&times;</span> -->
+        <h2>Ro‘yxatdan o‘tish</h2>
+
+        <form id="registerForm">
+          <label for="name">Ism</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Ismingizni kiriting"
+          />
+          <span class="error-text1" id="nameError"></span>
+
+          <label for="phone">Telefon raqami</label>
+          <div class="phone-group">
+            <span>+998 </span>
+            <input
+              type="text"
+              id="phone"
+              name="phone"
+              maxlength="12"
+              inputmode="numeric"
+              placeholder="90 123 45 67"
+            />
+          </div>
+          <span class="error-text" id="phoneError"></span>
+
+          <button type="submit" id="submitBtn" class="btn">
+            BEPUL QATNASHISH
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
