@@ -275,6 +275,7 @@ body {
   border: none;
   background: linear-gradient(to top, #3f0057, #720089);
 
+  cursor: pointer;
   font-size: 26px;
   color: white;
   font-weight: 500;
@@ -398,6 +399,7 @@ body {
   border: none;
   background: linear-gradient(to top, #66008e, #9900b8);
 
+  cursor: pointer;
   font-size: 28px;
   color: white;
   text-shadow: 0px 2px 2px rgb(66, 0, 96);
