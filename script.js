@@ -14,13 +14,13 @@ document.querySelectorAll("#openFormBtn, #openFormBtn1").forEach((btn) => {
 });
 
 // --- Modalni yopish ---
-overlay.addEventListener("click", (e) => {
-  if (e.target === overlay) {
-    overlay.style.display = "none";
-    form.reset();
-    clearAllErrors();
-  }
-});
+// overlay.addEventListener("click", (e) => {
+//   if (e.target === overlay) {
+//     overlay.style.display = "none";
+//     form.reset();
+//     clearAllErrors();
+//   }
+// });
 
 // --- Xatoliklar bilan ishlash ---
 function showError(input, message) {
