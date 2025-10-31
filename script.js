@@ -99,8 +99,8 @@ form.addEventListener("submit", async (e) => {
       form.reset();
       submitBtn.textContent = "RO‘YXATDAN O‘TISH";
       submitBtn.disabled = false;
-      overlay.style.display = "none";
       window.location.href = "telegram.html";
+      overlay.style.display = "none";
     }, 700);
   } catch (err) {
     alert("Xatolik yuz berdi: " + err.message);
